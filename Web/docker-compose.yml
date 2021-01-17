@@ -9,4 +9,14 @@ services:
       - 10001:80
     volumes:
       - ./Serialize/html:/var/www/html:ro
-      - ./Serialize/flag:/flag_962025850113.txt
+      - ./Serialize/flag:/flag_962025850113.txt:ro
+
+  Manager:
+    image: php:7-apache
+    restart: always
+    ports:
+      - 10002:80
+    volumes:
+      - ./Manager/html:/var/www/html:ro
+      - ./Manager/html/upload:/var/www/html/upload
+      - ./Manager/flag:/flag_215490273139.txt:ro
