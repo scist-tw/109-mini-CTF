@@ -20,3 +20,12 @@ services:
       - ./Manager/src:/var/www/html:ro
       - ./Manager/src/upload:/var/www/html/upload
       - ./Manager/flag:/flag_215490273139.txt:ro
+
+  SSGo:
+    image: tiangolo/uwsgi-nginx-flask:python3.8
+    restart: always
+    ports:
+      - 10003:80
+    volumes:
+      - ./SSGo/src:/app:ro
+      - ./SSGo/flag:/flag_354089518978.txt:ro
