@@ -29,3 +29,12 @@ services:
     volumes:
       - ./SSGo/src:/app:ro
       - ./SSGo/flag:/flag_354089518978.txt:ro
+
+  PHP_was_best:
+    image: php:7-apache
+    restart: always
+    ports:
+      - 10004:80
+    volumes:
+      - ./PHP_was_best/src:/var/www/html:ro
+      - ./PHP_was_best/flag:/flag_175945232433.txt:ro
