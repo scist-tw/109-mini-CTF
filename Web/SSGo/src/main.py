@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from flask import Flask, request, send_file, abort, redirect
 from subprocess import check_output, CalledProcessError
 from glob import glob
