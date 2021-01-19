@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from flask import Flask, request, send_file, abort, redirect
+from flask import Flask, request, send_file, abort, redirect, url_for
 from subprocess import check_output, CalledProcessError
 from glob import glob
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def source():
 def visit():
     url = request.args.get('url')
     if not url:
-        return redirect(index)
+        return redirect(url_for('index'))
     try:
         result = check_output(['curl', '--max-time', '1', '-s', url])
     except CalledProcessError as e:
