@@ -17,8 +17,8 @@ services:
     ports:
       - 10002:80
     volumes:
-      - ./Manager/src:/var/www/html:ro
       - ./Manager/src/upload:/var/www/html/upload
+      - ./Manager/src:/var/www/html:ro
       - ./Manager/flag:/flag_215490273139.txt:ro
 
   SSGo:
