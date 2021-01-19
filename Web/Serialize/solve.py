@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from subprocess import check_output
 from urllib.parse import quote
 from base64 import b64encode
