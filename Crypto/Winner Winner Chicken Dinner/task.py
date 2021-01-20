@@ -9,14 +9,13 @@ def create_keypair(size):
     while True:
         p = getPrime(size // 2)
         q = getPrime(size // 2)
-        if q < p < 2*q:
+        if q < p < 2 * q:
             break
 
     n = p * q
     phi = (p - 1) * (q - 1)
 
-    # Recall that: d < (N^(0.25))/3
-    max_d = c_div(isqrt(isqrt(n)), 3)
+    max_d = c_div(isqrt(isqrt(n)) , 3)
     max_d_bits = max_d.bit_length() - 1
 
     while True:
