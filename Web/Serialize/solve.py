@@ -2,9 +2,11 @@
 from subprocess import check_output
 from urllib.parse import quote
 from base64 import b64encode
+from os import getenv
 import requests, re
 
-url = 'http://localhost:10001'
+HOST = getenv('HOST') or 'localhost'
+url = f'http://{HOST}:10001'
 
 php_code = '''
 class User {

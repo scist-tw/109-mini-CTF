@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 from urllib.parse import quote
+from os import getenv
 import requests, re
 
-url = 'http://localhost:10003'
+HOST = getenv('HOST') or 'localhost'
+url = f'http://{HOST}:10003'
 
 http_raw = """
 GET_FLAG /backdoor HTTP/1.1

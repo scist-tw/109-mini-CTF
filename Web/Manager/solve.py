@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-
+from os import getenv
 import requests, re
 
-url = 'http://localhost:10002'
+HOST = getenv('HOST') or 'localhost'
+url = f'http://{HOST}:10002'
 
 s = requests.session()
 
