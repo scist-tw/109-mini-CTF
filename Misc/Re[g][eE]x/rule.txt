@@ -1,0 +1,1 @@
+^SCIST{[KCck]+[0Oo]*[1!LlI]{2,}_[\d\D]+_[\W]{1,3}_(fL4G|flag)_no(?!ne)_ex(PRES|pres)(S[1L!Iil]0N)}$

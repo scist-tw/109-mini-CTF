@@ -1,13 +1,13 @@
 #!/usr/bin/python
 from collections import Counter
 
-c = open("output.txt" , "r").read().decode("hex")
-#freq - sorted(set(text) , key = text.count)[::-1]
+f = open("output.txt" , "r")
+c = f.readline().strip().decode("hex")
 
 cnt = sorted(Counter(c).items() , key = lambda i : i[1] , reverse = True)
 cnt = map(lambda i : i[0] , cnt)
 
-freq = " EATNISORHLDCGWUFBYKPMVXJZQ"
+freq = f.readline()
 
 mapping = {}
 
