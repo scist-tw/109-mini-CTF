@@ -10,6 +10,7 @@ services:
     volumes:
       - ./Serialize/src:/var/www/html:ro
       - ./Serialize/flag:/flag_962025850113.txt:ro
+      - ./Serialize/apache2.conf:/etc/apache2/apache2.conf:ro
 
   Manager:
     image: php:7-apache
