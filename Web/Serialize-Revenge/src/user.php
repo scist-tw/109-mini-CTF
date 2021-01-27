@@ -4,7 +4,7 @@ include_once 'lib.php';
 $user = NULL;
 if (isset($_COOKIE['user']))
     $user = unserialize(base64_decode($_COOKIE['user']));
-if (isset($_POST['username']))
+else if (isset($_POST['username']))
     $user = new User($_POST['username']);
 
 if (!$user) {

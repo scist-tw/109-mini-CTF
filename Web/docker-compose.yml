@@ -38,3 +38,13 @@ services:
     volumes:
       - ./PHP_was_best/src:/var/www/html:ro
       - ./PHP_was_best/flag:/flag_175945232433.txt:ro
+
+  Serialize-Revenge:
+    image: php:7-apache
+    restart: always
+    ports:
+      - 10005:80
+    volumes:
+      - ./Serialize-Revenge/src:/var/www/html:ro
+      - ./Serialize-Revenge/flag:/flag_721304478738.txt:ro
+      - ./Serialize-Revenge/apache2.conf:/etc/apache2/apache2.conf:ro
